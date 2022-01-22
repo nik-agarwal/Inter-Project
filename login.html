@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Form</title>
+</head>
+<body>
+
+    <section id="login-window" class="container">
+        <h2 class="text-center">Log-In </h2>
+        <form id="login">
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Your Username" class="form-input" autocomplete="off" id="username" required>
+            <p class="error" id="username-error"> * Username is required ! </p>
+            
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Your Password" class="form-input"  id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <p class="error" id="password-error"> * Password is required ! </p>
+
+            <!-- <div>
+                <input type="checkbox">
+                <span>Remember me</span>
+            </div> -->
+           <div class="btn"> <button class="login-btn submit" type="button"> Login</button></div>
+        </form>
+    </section>
+    
+    <script src="login.js"></script>
+</body>
+</html>
